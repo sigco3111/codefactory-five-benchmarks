@@ -12,7 +12,7 @@
 | 한강시 3인칭 게임 | [hangang-city.html](hangang-city.html) | 걷기·차량·교통·미션 3종·수배·시간대 구현 |
 | 모델 소개 스크롤 페이지 | [model-intro.html](model-intro.html) | 입자 모핑 6장면·테마·로컬 UI·모션 감소 구현 |
 | 을지로 인쇄소 단편 | [웹 읽기](novel.html) · [원고](novel.md) | 제목·5장면 구성·본문 완성, 약 1.17만 자 |
-| USB OBS 촬영 컨트롤러 | [전체 소스 ZIP](1-usb-shoot-controller.zip) · [미리보기](6-hardware-preview.html) | 설계·ARM 빌드·모의 USB/OBS·CAD 검증, 실물 미검증 |
+| USB OBS 촬영 컨트롤러 | [전체 소스 ZIP](usb-shoot-controller.zip) · [미리보기](hardware-preview.html) | 설계·ARM 빌드·모의 USB/OBS·CAD 검증, 실물 미검증 |
 
 사용자 승인으로 저장소를 공개 전환하고 GitHub Pages 배포를 진행합니다. 기판 커밋도 별도 승인받았습니다.
 
@@ -58,7 +58,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 ## 05. USB OBS 촬영 컨트롤러
 
-기판 커밋 금지의 예외를 사용자에게 별도로 승인받아, 폴더 격리를 보존한 [전체 소스 ZIP](1-usb-shoot-controller.zip)을 포함했습니다. 압축을 풀면 firmware/host/enclosure/hardware/preview/tests 및 검증 로그 78개 파일이 원래 구조로 들어 있습니다. [조립·플래시·실행](HARDWARE_README.md), [검증 제한](HARDWARE_VERIFICATION.md), [공식 출처](HARDWARE_SOURCES.md)와 [웹 미리보기](6-hardware-preview.html)를 별도로 볼 수 있습니다. 웹 미리보기는 원본의 geometry/font/renderer를 한 파일에 포함한 복사본이며 설계·코드는 ZIP 원본을 기준으로 합니다. ARM 펌웨어 빌드, 모의 USB/OBS, CAD 디지털 검증을 마친 프로토타입이며 실제 하드웨어 제작·실제 OBS 연동은 검증하지 않았습니다.
+기판 커밋 금지의 예외를 사용자에게 별도로 승인받아, 폴더 격리를 보존한 [전체 소스 ZIP](usb-shoot-controller.zip)을 포함했습니다. 압축을 풀면 firmware/host/enclosure/hardware/preview/tests 및 검증 로그 78개 파일이 원래 구조로 들어 있습니다. [조립·플래시·실행](HARDWARE_README.md), [검증 제한](HARDWARE_VERIFICATION.md), [공식 출처](HARDWARE_SOURCES.md)와 [웹 미리보기](hardware-preview.html)를 별도로 볼 수 있습니다. 웹 미리보기는 원본의 geometry/font/renderer를 한 파일에 포함한 복사본이며 설계·코드는 ZIP 원본을 기준으로 합니다. ARM 펌웨어 빌드, 모의 USB/OBS, CAD 디지털 검증을 마친 프로토타입이며 실제 하드웨어 제작·실제 OBS 연동은 검증하지 않았습니다.
 
 ## 검증과 한계
 
