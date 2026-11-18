@@ -1,0 +1,133 @@
+[
+  {
+    "page": "palace",
+    "viewport": "1280x720",
+    "rendering": "Chrome headless / SwiftShader software WebGL",
+    "checks": [
+      {
+        "name": "sum of group counts equals actual brick records",
+        "pass": true
+      }
+    ],
+    "errors": [],
+    "stats": {
+      "bricks": 2814,
+      "parts": 26,
+      "groups": {
+        "terrace": 626,
+        "pillars": 252,
+        "brackets": 382,
+        "roof": 1388,
+        "courtyard": 166
+      },
+      "dimensionsCm": [
+        263,
+        142,
+        403
+      ],
+      "generationMs": 538
+    }
+  },
+  {
+    "page": "hangang-city",
+    "viewport": "1280x720",
+    "rendering": "Chrome headless / SwiftShader software WebGL",
+    "checks": [
+      {
+        "name": "walking changes position",
+        "pass": true,
+        "detail": {
+          "start": 38,
+          "z": 35.783436242645294
+        }
+      },
+      {
+        "name": "jump has positive height",
+        "pass": true,
+        "detail": 1.2080000000000002
+      },
+      {
+        "name": "gravity lands",
+        "pass": true,
+        "detail": 0
+      },
+      {
+        "name": "F enters nearby car",
+        "pass": true
+      },
+      {
+        "name": "acceleration changes speed",
+        "pass": true,
+        "detail": 2.1585234481239213
+      },
+      {
+        "name": "F exits to free space",
+        "pass": true
+      },
+      {
+        "name": "delivery reaches goal",
+        "pass": true
+      },
+      {
+        "name": "wanted decays while unseen",
+        "pass": true,
+        "detail": 0
+      },
+      {
+        "name": "four rooftop checkpoints complete",
+        "pass": true,
+        "detail": {
+          "wanted": 0,
+          "mission": null,
+          "completed": [
+            "delivery",
+            "escape",
+            "roof"
+          ],
+          "elapsed": 31.456599999999504,
+          "fps": 25
+        }
+      }
+    ],
+    "errors": [],
+    "initial": {
+      "wanted": 0,
+      "mission": null,
+      "completed": [],
+      "elapsed": 0.17659999999999992,
+      "fps": 0,
+      "drawCalls": 208
+    }
+  },
+  {
+    "page": "model-intro",
+    "viewport": "1280x720",
+    "rendering": "Chrome headless / SwiftShader software WebGL",
+    "checks": [
+      {
+        "name": "UI demo button increments counter",
+        "pass": true
+      },
+      {
+        "name": "question demo clearly reports no backend",
+        "pass": true
+      },
+      {
+        "name": "no horizontal overflow at 390px",
+        "pass": true
+      },
+      {
+        "name": "reduced motion preference detected",
+        "pass": true
+      }
+    ],
+    "errors": [],
+    "state": {
+      "progress": 0,
+      "particles": 9800,
+      "reducedMotion": false,
+      "dark": false,
+      "fps": 19
+    }
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "name": "codefactory-five-benchmarks",
+  "version": "1.0.0",
+  "description": "코드팩토리 출처 메타프롬프트 5종 구현",
+  "scripts": {
+    "test": "node web-tests.mjs"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.18.1"
+  },
+  "private": true
+}
