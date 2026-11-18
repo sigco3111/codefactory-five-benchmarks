@@ -1,6 +1,21 @@
-# 코드팩토리 메타프롬프트 5종 구현
+# Instinct Benchmarks | 인스팅트 벤치마크
 
-사용자가 제공한 모델 성능 벤치마크 메타프롬프트를 바탕으로 만든 결과물 모음입니다.
+Instinct가 같은 다섯 과제를 구현한 결과를 기록하는 저장소입니다. 추후 다른 에이전트·모델이 별도 저장소에서 수행한 결과와 비교할 수 있도록 원문과 실행 방법, 검증 범위, 후속 수정 여부를 구분합니다. 공식 성능 순위나 통제 실험 점수가 아닙니다.
+
+[웹에서 결과 바로 보기](https://sigco3111.github.io/instinct-benchmarks/) · [USB OBS 컨트롤러 3D](https://sigco3111.github.io/instinct-benchmarks/1-controller-3d.html)
+
+## 비교 기록
+
+| 항목 | 이 저장소 |
+|---|---|
+| 실행 주체 | Instinct |
+| 과제 출처 | 사용자 제공 코드팩토리 메타프롬프트 |
+| 세부 모델명·effort | 미지정. 임의로 추정하지 않음 |
+| 평가 기준 | 기능 충족·화면 품질·재현성·검증 증거·미검증 항목 |
+| 실행 성격 | 최초 구현 이후 사용자 피드백을 반영한 수정본. 단일 시도·동일 시간 제한 실험이 아님 |
+| 후속 수정 | 2026-11-18 근정전 형태/브릭 모션 개선, 컨트롤러 직접 조작 3D 웹 추가 |
+
+다른 실행은 원문 해시, 지정 모델·effort, 실행 날짜, 시간/비용 제한, 사용 조건, 수정 라운드와 검증 환경을 함께 기록해야 같은 조건인지 판단할 수 있습니다. 현재 값이 없는 항목은 점수나 완료로 채우지 않습니다. 원문은 `ORIGINAL_PROMPTS.txt`와 이 문서 하단에 그대로 보존합니다.
 
 **메타프롬프트 출처: 유튜버 코드팩토리.** 출처 이름은 사용자가 제공했으며, 원본 영상 URL은 제공되지 않았습니다. 아래 원문은 맞춤법과 자리표시자를 고치지 않고 보존했습니다.
 
@@ -12,9 +27,9 @@
 | 한강시 3인칭 게임 | [hangang-city.html](hangang-city.html) | 걷기·차량·교통·미션 3종·수배·시간대 구현 |
 | 모델 소개 스크롤 페이지 | [model-intro.html](model-intro.html) | 입자 모핑 6장면·테마·로컬 UI·모션 감소 구현 |
 | 을지로 인쇄소 단편 | [웹 읽기](novel.html) · [원고](novel.md) | 제목·5장면 구성·본문 완성, 약 1.17만 자 |
-| USB OBS 촬영 컨트롤러 | [전체 소스 ZIP](14-usb-shoot-controller.zip) · [미리보기](12-hardware-preview.html) | 설계·ARM 빌드·모의 USB/OBS·CAD 검증, 실물 미검증 |
+| USB OBS 촬영 컨트롤러 | [3D 웹에서 바로 조작](https://sigco3111.github.io/instinct-benchmarks/1-controller-3d.html) | 설계·ARM 빌드·모의 USB/OBS·CAD 검증, 실물 미검증 |
 
-사용자 승인으로 저장소를 공개 전환하고 GitHub Pages 배포를 진행합니다. 기판 커밋도 별도 승인받았습니다.
+컨트롤러는 압축을 풀지 않고 위 3D 웹 링크로 바로 확인합니다. 원본 설계 자료는 보존합니다.
 
 ## 실행
 
@@ -62,7 +77,17 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 ## 05. USB OBS 촬영 컨트롤러
 
-기판 커밋 금지의 예외를 사용자에게 별도로 승인받아, 폴더 격리를 보존한 [전체 소스 ZIP](14-usb-shoot-controller.zip)을 포함했습니다. 압축을 풀면 firmware/host/enclosure/hardware/preview/tests 및 검증 로그 78개 파일이 원래 구조로 들어 있습니다. [조립·플래시·실행](HARDWARE_README.md), [검증 제한](HARDWARE_VERIFICATION.md), [공식 출처](HARDWARE_SOURCES.md)와 [웹 미리보기](12-hardware-preview.html)를 별도로 볼 수 있습니다. 웹 미리보기는 원본의 geometry/font/renderer를 한 파일에 포함한 복사본이며 설계·코드는 ZIP 원본을 기준으로 합니다. ARM 펌웨어 빌드, 모의 USB/OBS, CAD 디지털 검증을 마친 프로토타입이며 실제 하드웨어 제작·실제 OBS 연동은 검증하지 않았습니다.
+[3D 컨트롤러 열기](https://sigco3111.github.io/instinct-benchmarks/1-controller-3d.html)
+
+- 드래그/터치로 3D 회전, 휠로 확대·축소. 키보드 방향키와 +/-도 지원합니다.
+- 입체/상단/정면 프리셋, 케이스 열기, 자동 회전, 시점 초기화.
+- 0~12초 타임라인과 조립/분해 버튼. CAD에서 내보낸 케이스 메시와 단순 부품 외형을 사용합니다.
+- 모의 REC·장면 전환·연결 끊기/복구, OLED 상태·경과 시간·빨간 표시등. 실제 USB/OBS를 제어하지 않습니다.
+- 한 HTML에 메시와 한글 서브셋 폰트를 포함해 별도 CDN·설치·ZIP 없이 실행합니다. WebGL 지원 브라우저가 필요합니다.
+
+[조립·플래시·실행](HARDWARE_README.md), [기존 하드웨어 검증](HARDWARE_VERIFICATION.md), [공식 출처](HARDWARE_SOURCES.md)를 함께 보세요. 이전 설계 소스 ZIP과 고정 시점 미리보기는 이력 자료로 보존했습니다. 현재 주 결과는 직접 조작하는 3D 웹입니다. CAD·펌웨어를 이번 화면 개선으로 새로 검증했다고 주장하지 않습니다. 실제 제작·전류·포트 공차·실제 OBS 연동은 미검증입니다.
+
+2026-11-18 3D 웹 검사: Chrome/SwiftShader, 1920×1080 및 390×844. 드래그 회전, 휠 확대, 분해 탐색, 케이스 열기, 상단 시점, REC, 장면 전환, 연결 끊김/복구, 타임라인 재생, 자동 회전, 모바일 가로 넘침 없음의 12개 검사 통과. JavaScript 페이지 오류 0건. 60fps·실물 동작을 입증하는 검사는 아닙니다.
 
 ## 검증과 한계
 
