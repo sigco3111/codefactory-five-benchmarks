@@ -11,21 +11,28 @@
     ],
     "errors": [],
     "stats": {
-      "bricks": 2814,
-      "parts": 26,
+      "bricks": 4761,
+      "parts": 51,
       "groups": {
-        "terrace": 626,
-        "pillars": 252,
-        "brackets": 382,
-        "roof": 1388,
-        "courtyard": 166
+        "terrace": 970,
+        "pillars": 553,
+        "brackets": 512,
+        "roof": 2580,
+        "courtyard": 146
       },
       "dimensionsCm": [
-        263,
+        270,
         142,
-        403
+        359
       ],
-      "generationMs": 538
+      "generationMs": 574,
+      "version": 2
+    },
+    "motion": {
+      "nativePlaybackReached32": true,
+      "reducedMotionStartsPaused": true,
+      "keyboardSliderAt0_01": true,
+      "softwareWebGLFrameRateNotCertified": true
     }
   },
   {
