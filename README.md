@@ -69,13 +69,17 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 모델명은 `{{MODEL_NAME}}` 그대로입니다. 1M은 연출 개념값으로 표시하며 모델 지원 한도라고 주장하지 않습니다. 실제 추론 점수와 에이전트 지원 범위는 미지정입니다. 질문 폼은 외부 전송 없는 로컬 UI 데모입니다.
 
-## 04. 역상(逆像)
+### 04. 역상(逆像)
+
+![단편 소설 역상 읽기 화면](novel-final.png)
 
 [소설 전체 읽기](novel.html) · [구성과 분량](NOVEL_README.md) · [원고 검증](NOVEL_VERIFICATION.md)
 
 2031년 폐업을 앞둔 을지로 활판 인쇄공 문 씨에게 도착하는 마지막 주문. 제목과 다섯 장면 구성에 이어 본문을 끝까지 수록했습니다. 주문자의 정체를 단정하지 않고 인쇄된 한 장으로 마칩니다.
 
-## 05. USB OBS 촬영 컨트롤러
+### 05. USB OBS 촬영 컨트롤러
+
+![SHOOT 01 컨트롤러 3D 조작 화면](controller-3d-final.png)
 
 [3D 컨트롤러 열기](https://sigco3111.github.io/instinct-benchmarks/1-controller-3d.html)
 
